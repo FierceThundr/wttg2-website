@@ -1,0 +1,203 @@
+/* General Code */
+
+html {
+	background-color:black;
+	animation:pulse1 5s ease infinite normal;
+}
+
+body {
+	overflow:hidden;
+	user-select:none;
+	font-family:consolas, monospaced;
+}
+
+.content-wrapper {
+	position:absolute;
+	top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+	
+	/* Outline Styling
+	border:3px solid blue;
+	*/
+}
+
+.content-mask {
+	position:absolute;
+	top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+	overflow:hidden;
+	animation: pulse2 5s ease infinite normal;
+	
+	/* Outline Styling
+	border:3px solid red;
+	*/
+}
+
+.content-canvas {
+	position:absolute;
+}
+
+.content {
+	position:absolute;
+	transition:left ease 0.5s, top ease 0.5s;
+}
+
+.content-tag {	
+	color:inherit;
+	background-color:rgba(0,0,0,0);
+	position:absolute;
+	box-sizing:border-box;
+	border:5px solid;
+	user-select:all;
+}
+
+.controls-main {
+	color:inherit;
+	background-color:rgba(0,0,0,0);
+	font-weight:bold;
+	position:absolute;
+	text-align:center;
+	border:none;
+	
+	/* Outline Styling
+	border:3px solid orange;
+	*/
+}
+
+.controls-up {
+  top:5px;
+  left:50%;
+  transform:translatex(-50%) rotate(180deg);
+}
+
+.controls-down {
+  bottom:5px;
+  left:50%;
+  transform:translatex(-50%) rotate(0deg);
+}
+
+.controls-left {
+  top:50%;
+  left:5px;
+  transform:translatey(-50%) rotate(90deg);
+}
+
+.controls-right {
+  top:50%;
+  right:5px;
+  transform:translatey(-50%) rotate(270deg);
+}
+
+:focus {
+	outline:none;
+}
+
+/* Effects */
+
+/* Color pulse effect */
+@keyframes pulse1 {
+  0%   {
+		color:#e50000;
+	}
+  50%  {
+		color:#c70000;
+	}
+  100% {
+		color:#e50000;
+	}
+}
+@keyframes pulse2 {
+  0%   {
+		background-color:#e50000;
+	}
+  50%  {
+		background-color:#c70000;
+	}
+  100% {
+		background-color:#e50000;
+	}
+}
+/* End pulse effect */
+
+/* CRT effect is a modified version from http://aleclownes.com/2017/02/01/crt-display.html */
+@keyframes flicker {
+  0% {opacity: 0.27861}
+  5% {opacity: 0.34769}
+  10% {opacity: 0.23604}
+  15% {opacity: 0.90626}
+  20% {opacity: 0.18128}
+  25% {opacity: 0.83891}
+  30% {opacity: 0.65583}
+  35% {opacity: 0.67807}
+  40% {opacity: 0.26559}
+  45% {opacity: 0.84693}
+  50% {opacity: 0.96019}
+  55% {opacity: 0.08594}
+  60% {opacity: 0.20313}
+  65% {opacity: 0.71988}
+  70% {opacity: 0.53455}
+  75% {opacity: 0.37288}
+  80% {opacity: 0.71428}
+  85% {opacity: 0.70419}
+  90% {opacity: 0.7003}
+  95% {opacity: 0.36108}
+  100% {opacity: 0.24387}
+}
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+/* End CRT effect */
+
+/* Highlight Clickpoints */
+
+/*
+.CPTAG {
+  outline: 10px solid rgba(255,255,0,0.75)
+}
+
+.CFTAG {
+  outline: 10px solid rgba(0,255,30,0.75)
+}
+
+.PTAG {
+  outline: 10px solid rgba(255,0,0,0.75)
+}
+
+.CFTAG.CPTAG {
+	outline: 10px solid rgba(0,255,255,0.75)
+}
+
+.CPTAG_area {
+  background: rgba(255,255,0,0.25)
+}
+
+.CFTAG_area {
+  background: rgba(0,255,30,0.25)
+}
+*/

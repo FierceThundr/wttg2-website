@@ -1,0 +1,322 @@
+/* General Code */
+
+header {
+  border-bottom: 3px solid white;
+  display:flex;
+  align-items:center;
+  height:106px;
+}
+
+footer {
+  border-top: 3px solid white;
+  margin-top:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:50px;
+}
+
+header button {
+  height:42px;
+  width:75px;
+  border:solid white 2px;
+  border-radius: 2px;
+  background-color:rgba(0,0,0,0);
+  margin-left:10px;
+  color:white;
+}
+
+a > img {
+  vertical-align:middle;
+}
+
+.body-style-dark {
+  background-color:black;
+  color:white;
+}
+
+.position-center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.announcement {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #991c1c;
+  border: solid 3px #ff0202;
+}
+
+.content_wrapper {
+  width:800px;
+  min-height:400px;
+  margin:10px auto 0 auto;
+}
+
+.content_wrapper p {
+  font-size: 20px;
+}
+
+/* Archive List */
+
+.entry_list {
+  margin:10px auto 0 auto;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap: wrap;
+  width:800px;
+}
+
+.entry_list img {
+  margin:5px;
+}
+
+.navigation {
+  display:flex;
+  justify-content: space-between;
+  margin:10px auto 10px auto;
+  width:500px;
+}
+
+.navigation button {
+  font-size: 25px;
+  height: 30px;
+  width: 75px;
+  border:0px;
+  border-radius: 2px;
+  background-color:rgba(0,0,0,0);
+  color:white;
+}
+
+.navigation p {
+  display:inline-block;
+  font-size: 25px;
+  margin:0;
+}
+
+/* Entry 10 */
+
+.body-lost {
+  background-image:url("Assets/lost.png");
+  background-position:top center;
+  background-color:#000000;
+  background-size:1600px;
+  background-repeat:no-repeat;
+  text-align:center;
+	padding-top:25px;
+}
+
+.text-lost {
+  color:white;
+  font-size:25px;
+}
+
+/* Entry11 */
+
+.body-journal {
+	background-color:#171717;
+	text-align:center;
+	width:100%;
+	margin:0;
+	color:#FFFFFF;
+	font-family:sans-serif;
+}
+
+.body-journal img {
+	display:block;
+	margin:25px auto;
+	width:1153px;
+}
+
+.body-journal a {
+	margin:0 0 0 10px;
+	text-decoration:underline;
+	color:rgb(0,0,238);
+}
+
+.paragraph-wrapper {
+	width:500px;
+	margin:16px auto;
+}
+
+/* Entry 16 */
+
+.body-lock {
+  background-color:#020202;
+  position:absolute;
+  margin:0;
+  left:0px;
+  top:0px;
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+  border:solid lime 1px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  color:#00FF00;
+  overflow:hidden;
+}
+
+.lock {
+  width:200px;
+}
+
+.passcode {
+  display:inline-block;
+  box-sizing:border-box;
+  width:720px;
+  height:27px;
+  text-align:center;
+  background-color:rgba(0,0,0,0);
+  border:solid lime 1px;
+  color:inherit;
+}
+
+.submit {
+  margin-top:10px;
+  width:200px;
+  height:25px;
+  background-color:rgba(0,0,0,0);
+  color:inherit;
+  border:solid grey 1px;
+}
+
+.content-wrapper {
+  opacity:0;
+  display:none;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:10px;
+  box-sizing:border-box;
+  background-color:#020202;
+}
+
+.content-container {
+  background-color:#020202;
+  border:solid lime 1px;
+  box-sizing:border-box;
+  margin:0 auto;
+  max-width:700px;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  padding:10px;
+}
+
+.content-show {
+  animation:fade-in 3s forwards;
+  display:block;
+}
+
+@keyframes fade-in {
+ from {opacity: 0;}
+ to {opacity: 1;}
+}
+
+.mono {
+  font-family:monospace;
+}
+
+/* Entry 17 */
+
+.body-access-error {
+  background-color:black;
+  color:white;
+  text-align:center;
+	font-family:monospace;
+}
+
+audio {
+	display:block !important;
+}
+
+/* Entry Security Alert */
+
+.notification {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: white;
+	padding: 10px;
+	background-color: #991c1c;
+	border: solid 3px #ff0202;
+	user-select: none;
+	Pointer-events: none;
+}
+			
+.notification p {
+	margin:0;
+}
+
+/* Entry Clickpoints */
+
+.p {
+  position:absolute;
+}
+
+.p1 {
+  top:0;
+  left:0;
+}
+
+.p2 {
+  top:0;
+  right:0;
+}
+
+.p3 {
+  bottom:0;
+  left:0;
+}
+
+.p4 {
+  bottom:0;
+  right:0;
+}
+
+.p div {
+  width:100px;
+  height:100px;
+  margin:0;
+}
+
+.p p {
+  margin:15px;
+}
+
+/* Highlight Clickpoints */
+
+/*
+.CPTAG {
+  outline: 10px solid rgba(255,255,0,0.75)
+}
+
+.CFTAG {
+  outline: 10px solid rgba(0,255,30,0.75)
+}
+
+.PTAG {
+  outline: 10px solid rgba(255,0,0,0.75)
+}
+
+.CFTAG.CPTAG {
+	outline: 10px solid rgba(0,255,255,0.75)
+}
+
+.CPTAG_area {
+  background: rgba(255,255,0,0.25)
+}
+
+.CFTAG_area {
+  background: rgba(0,255,30,0.25)
+}
+*/

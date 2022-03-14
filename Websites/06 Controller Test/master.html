@@ -1,0 +1,36 @@
+<!Doctype HTML>
+<html itemscope itemtype="http://schema.org/WebPage">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>Master</title>
+		<script async>
+			var pages = ["demo1","demo2","demo3","demo4","demo5"]
+
+			if (localStorage.getItem("order") == undefined) {
+				localStorage.setItem("order",JSON.stringify(shuffle(pages.length)))
+				localStorage.setItem("position",0)
+			}
+			
+			var order = JSON.parse(localStorage.getItem("order"))
+			var position = localStorage.getItem("position")
+		
+			var parameters = new URLSearchParams(window.location.search)
+			if (parameters.get("pass") == "1") {
+				if (++position == order.length) {position = 0}
+				localStorage.setItem("position",position)
+			}
+			window.location.href = order[position] + ".html?master=1&page=" + order[position] + ".html"
+			
+			function shuffle(a){
+				var set = new Set()
+				while(set.size < a) {
+					set.add(pages[Math.floor(Math.random() * a)])
+				}
+				return Array.from(set)
+			}
+		</script>
+	</head>
+	<body style="background-color:black">
+	</body>
+</html>

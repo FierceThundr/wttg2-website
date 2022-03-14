@@ -1,0 +1,1 @@
+function LinkClick(l) {window.location.href = l}

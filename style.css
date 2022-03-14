@@ -1,0 +1,42 @@
+body {
+background-color:#0c0c0c;
+font-family:Consolas,monaco,monospace;
+font-size:16px;
+margin:0;
+padding:0;
+color:hsl(120,100%,50%)
+}
+
+.main_wrapper {
+border:solid 1px #2a2a2a;
+height:calc(100vh - 2px);
+position:relative;
+width:calc(100vw - 2px);
+overflow:auto;
+}
+
+p {
+margin:0;
+word-wrap:break-word;
+word-break:break-all;
+white-space:pre-wrap;
+width:100%;
+}
+
+a {
+color:inherit;
+cursor:pointer;
+}
+
+.hover {
+text-decoration-style: dotted;
+text-decoration-line: underline;
+}
+
+* {
+cursor:default;
+}
+
+:focus {
+outline:none;
+}

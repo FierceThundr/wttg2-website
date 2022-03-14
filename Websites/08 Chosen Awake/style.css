@@ -1,0 +1,59 @@
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#432432;
+	text-align:center;
+	overflow-x:hidden;
+}
+
+img {
+	user-select:none;
+}
+
+#archive_embed {
+	display:block;
+	position:absolute;
+	font-family:Arial,Helvetica;
+	color:#000000;
+	font-size:14px;
+	white-space:nowrap;
+	font-weight:bold;
+}
+
+#content_wrapper {
+	position:relative;
+	width:1153px;
+	margin:0em auto;
+}
+
+.the_second_lesson {
+	position:absolute;
+	top:6229px;
+	height:1300px;
+	width:100%;
+	background-color:hsl(9,9%,9%);
+	z-index:-1;
+}
+
+canvas {
+	position:absolute;
+	width:1153px;
+	height:100%;
+	pointer-events:none;
+	z-index:5;
+}
+
+area {
+	/*Only necessary for demo*/
+	cursor:default;
+	/*=======================*/
+	user-select:none;
+}
+
+#field {
+	width:100%;
+	color:white;
+	position:absolute;
+	bottom:15px;
+	margin:0;
+}

@@ -1,0 +1,49 @@
+<!Doctype HTML>
+<html itemscope itemtype="http://schema.org/WebPage">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>Find Your Way</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<script language="javascript" type="text/javascript" src="script.js"></script>
+		<style id="custom1"></style>
+		<style id="custom2"></style>
+		<style id="custom3"></style>
+		<style id="config-css"></style>
+		<style id="move-css"></style>
+		<style id="tag-css"></style>
+	</head>
+	<body class="crt">
+		<span style="position:relative;z-index:999;display:none;">
+			<button onclick="generate()">Generate</button>
+			<button onclick="toggle1()">Toggle Clickpoints</button>
+			<button onclick="toggle2()">Toggle Mask</button>
+			<button onclick="toggle3()">Toggle Outlines</button>
+			<a href="https://www.whatismybrowser.com/"><button onclick="browsercheck()">WhatIsMyBrowser</button></a>
+			<button onclick="test1()">Test1</button>
+			<button onclick="test2()">Test2</button>
+			<button onclick="test3()">Test3</button>
+			<button onclick="test4()">Test4</button>
+			<button onclick="test5()">Test5</button>
+			<!--<canvas id="buffer">-->
+			<p id="test1">This is a test</p>
+			<p id="test2">This is a test</p>
+			<p id="test3">This is a test</p>
+		</span>
+		<p id="version"></p>
+		<div class="content-wrapper">
+			<div class="content-mask">
+				<div class="content" id="content">
+					<canvas class="content-canvas" id="canvas"></canvas>
+					<button class="CFTAG content-tag" tabindex="-1"></button>
+					<button class="CPTAG content-tag" tabindex="-1"></button>
+					<button class="PTAG content-tag" tabindex="-1"></button>
+				</div>
+			</div>
+			<button onclick="move(0,-1)" class="controls-main controls-up">V</button>
+			<button onclick="move(0,1)" class="controls-main controls-down">V</button>
+			<button onclick="move(-1,0)" class="controls-main controls-left">V</button>
+			<button onclick="move(1,0)" class="controls-main controls-right">V</button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Bomb Maker</title>
+    <script type="text/javascript" language="javascript" src="../jQuery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../basic.js"></script>
+    <script type="text/javascript" language="javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../basic.css" />
+    <style>
+      html {
+        background-color: #4c3010;
+      }
+      
+      body {
+        position:relative;
+        width:1153px;
+        margin: 0em auto;
+        padding: 0px;
+      }
+
+      #keySpot{
+        display: block;
+        position: absolute;
+        font-family:Arial, Helvetica;
+        color: #FFFFFF;
+        font-size: 14px;
+        white-space: nowrap;
+        
+        /*
+        Purely for easier viewing
+        
+        border:3px solid red;
+        */
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <img src="TheBombMaker.png" width="1153" height="1200" usemap="#Map">
+      
+    <map name="Map">
+      <area shape="rect" coords="218,272,326,356" class = "hotZone">
+      <area shape="rect" coords="492,122,518,146" class = "hotZone">
+      <area shape="rect" coords="489,22,531,66" class = "hotZone">
+      <area shape="rect" coords="821,525,876,567" class = "hotZone">
+      <area shape="rect" coords="942,698,981,731" class = "hotZone">
+      <area shape="rect" coords="901,1013,975,1111" class = "hotZone">
+      <area shape="rect" coords="160,976,205,998" class = "hotZone">
+      <area shape="rect" coords="33,1013,74,1031" class = "hotZone">
+    </map>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Kill For Me</title>
+		<script type="text/javascript" language="javascript" src="keyengine.js"></script>
+		<script type="text/javascript" language="javascript" src="../jQuery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="../basic.js"></script>
+		<link rel="stylesheet" type="text/css" href="../basic.css" />
+		<style>
+		  body {
+		    margin: 0px;
+		    padding: 0px;
+		    background-color: #000000;
+		  }
+
+		  #archive_embed {
+		    display: block;
+		    position: absolute;
+		    font-family:Arial, Helvetica;
+		    color: #FFFFFF;
+		    font-size: 14px;
+				white-space: nowrap;
+				font-weight: bold;
+		  }
+
+		  #content_wrapper {
+		    position: relative;
+		    width: 1153px;
+		    margin: 0em auto;
+		  }
+		</style>
+	</head>
+	<body>
+		<div id="content_wrapper">
+			<img src="Assets v1/KillForMe.png" width="1153" usemap="#Map">
+		</div>
+
+		<map name="Map">
+			<area shape="rect" coords="117,287,235,312" onMouseOver="LinkHover()" onMouseOut="LinkOut()" onclick="LinkClick('error.html')">
+			<area shape="rect" coords="53,345,235,370" onMouseOver="LinkHover()" onMouseOut="LinkOut()" onclick="LinkClick('error.html')">
+			<area shape="rect" coords="106,114,235,177" class="FPTAG">
+			<area shape="rect" coords="32,15,235,79" class="CPTAG">
+			<area shape="rect" coords="165,84,235,110" class="CFTAG">
+			<area shape="rect" coords="285,17,1098,179" class="CFTAG">
+			<area shape="rect" coords="906,345,951,363" class="CPTAG">
+			<area shape="rect" coords="285,268,317,285" class="CFTAG">
+			<area shape="rect" coords="462,306,517,324" class="CPTAG">
+		</map>
+	</body>
+</html>
