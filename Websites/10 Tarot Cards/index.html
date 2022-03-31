@@ -132,50 +132,50 @@
 			}
 			
 			.position1 {
-				top:calc(100% - 150px);
-				left:20%;
-				z-index:1;
+			top:calc(100% - 150px);
+			left:20%;
+			z-index:1;
 			}
 			
 			.position2 {
-				top:calc(100% - 190px);
-				left:30%;
-				z-index:2;
+			top:calc(100% - 190px);
+			left:30%;
+			z-index:2;
 			}
 			
 			.position3 {
-				top:calc(100% - 210px);
-				left:40%;
-				z-index:3;
+			top:calc(100% - 210px);
+			left:40%;
+			z-index:3;
 			}
 			
 			.position4 {
-				top:calc(100% - 220px);
-				left:50%;
-				z-index:4;
+			top:calc(100% - 220px);
+			left:50%;
+			z-index:4;
 			}
 			
 			.position5 {
-				top:calc(100% - 210px);
-				left:60%;
-				z-index:5;
+			top:calc(100% - 210px);
+			left:60%;
+			z-index:5;
 			}
 			
 			.position6 {
-				top:calc(100% - 190px);
-				left:70%;
-				z-index:6;
+			top:calc(100% - 190px);
+			left:70%;
+			z-index:6;
 			}
 			
 			.position7 {
-				top:calc(100% - 150px);
-				left:80%;
-				z-index:7;
+			top:calc(100% - 150px);
+			left:80%;
+			z-index:7;
 			}
 			
 			.position0 {
-				left:50%;
-				top:150px;
+			left:50%;
+			top:150px;
 			}
 		</style>
 		<script>
@@ -213,14 +213,10 @@
 				document.getElementById("card_title").innerText = a.title
 				document.getElementById("card_symbol").classList.add(a.symbol)
 				document.getElementById("card_description").innerText = a.description
-				//document.getElementById("card_wrapper").style.bottom = "50%" 
-				
-
 			}
 			
 			function card_picked(card,index) {
 				if (s > 0) {return}
-				console.log(s)
 				s++
 				card.remove()
 				card = document.getElementById("card_wrapper")
@@ -254,7 +250,6 @@
 			<div id="card" class="flip-card">
 				<div class="flip-front">
 					<div class="card-back-symbol"></div>
-					<!--<div class="card-back-title"><h1>Hover Me!</h1></div>-->
 				</div>
 				<div class="flip-back">
 					<div class="card-front-symbol"><h1><i id="card_symbol" class="fa fa-3x"></i></h1></div>
