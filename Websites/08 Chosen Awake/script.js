@@ -103,7 +103,7 @@ function verify(i,c) {
 function cursor() {
 	var l = document.getElementsByClassName(`s${las}`),
 			c = document.getElementsByClassName(`s${cur}`)
-	console.log(l,c,l[0])
+	//console.log(l,c,l[0])
 	for (let i = 0; i < l.length; i++) {
 		l[i].removeAttribute("onMouseOver","LinkHover()")
 		l[i].removeAttribute("onMouseOut","LinkOut()")
@@ -158,9 +158,29 @@ function PlaceWiki(w) {
 }
 
 //*Only necessary for demo or testing
-function LinkHover(){console.log("LinkHover")}
-function LinkOut(){console.log("LinkOut")}
-function PuzzleGoodClick() {console.log("*ding*")}
-function PuzzleFailClick() {console.log("*buzz*")}
-function WikiSpotHit() {console.log("*victory*")}
+var sounds = {
+	"goodhit":new Audio('caGoodHit.wav'),
+	"failhit":new Audio('caFailHit.wav'),
+	"wikifound":new Audio('caWikiFound.wav')
+}
+function LinkHover(){}
+function LinkOut(){}
+function PuzzleGoodClick() {
+	sounds.goodhit.currentTime = 0
+	sounds.goodhit.play()
+}
+function PuzzleFailClick() {
+	sounds.failhit.currentTime = 0
+	sounds.failhit.play()
+}
+function WikiSpotHit() {
+	sounds.wikifound.currentTime = 0
+	sounds.wikifound.play()
+	PlaceWiki(GenerateLink())
+}
+function GenerateLink() {
+	var characters = "1234567890abcdef", string = ""
+	while (string.length != 20) {string += characters.substr(Math.floor(Math.random() * characters.length),1)}
+	return `https://${string}.ann`
+}
 //=================================*/
