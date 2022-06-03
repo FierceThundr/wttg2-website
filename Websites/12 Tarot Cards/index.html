@@ -179,6 +179,9 @@
 			}
 		</style>
 		<script>
+		
+/*
+[Original Versions]
 			var c = [
 			{"title":"The Dizzy",      "symbol":"fa-refresh",          "description":"The game will slowly rotate the camera 360 degrees"},
 			{"title":"The Drunk",      "symbol":"fa-glass",            "description":"The game will invert all movement mechanics"},
@@ -190,7 +193,7 @@
 			{"title":"The Noob",       "symbol":"fa-trash",            "description":"The player will be revoked access to key cue"},
 			{"title":"The Quick",      "symbol":"fa-bolt",             "description":"The player will be faster"},
 			{"title":"The Immune",     "symbol":"fa-universal-access", "description":"All enemies will be delayed by 10 minutes"},
-			{"title":"The Popular",    "symbol":"fa-comments-o",       "description":"All enemies will have shorter timers"},
+			{"title":"The Popular",    "symbol":"fa-comments-o",       "description":"All enemies will be given shorter timers"},
 			{"title":"The Sun",        "symbol":"fa-sun-o",            "description":"The game timer will be slower"},
 			{"title":"The Moon",       "symbol":"fa-moon-o",           "description":"The game timer will be faster"},
 			{"title":"The Undertaker", "symbol":"fa-gavel",            "description":"The game will force the Breather to spawn during the next alley visit"},
@@ -203,7 +206,74 @@
 			{"title":"The Blessed",    "symbol":"fa-key",              "description":"The game will spawn a random key file on the desktop"},
 			{"title":"The Gambler",    "symbol":"fa-money",            "description":"The game will randomly raise or lower prices of the item markets"},
 			{"title":"The Dead",       "symbol":"fa-unlock-alt",       "description":"The game will spawn Lucas lockpicking"},
-			{"title":"The Fool",       "symbol":"fa-smile-o",          "description":"When a card is drawn, it has a chance to turn into the fool and do nothing"},
+			{"title":"The Fool",       "symbol":"fa-smile-o",          "description":"When a card is drawn, it has a chance to turn into the fool and do nothing"}
+			]
+			
+Tarot Cards
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+(Common) The Pro - Key Cue/PingBoost
+(Common) The Noob - Anti Key Cue/Anti PingBoost
+(Common) The Sun - Time in game runs slower
+(Common) The Moon - Time in game runs faster
+(Common) The Rich - Gives random amount of DOS
+(Common) The Poor - Takes random amount of DOS
+(Common) The Cursed - Adds 1-5 viruses
+
+(Uncommon) The Gambler - Adds or removes 50 DOS Coins
+(Uncommon) The Hacker - Normal or 1337 hack.
+(Uncommon) The Devil - Discounts both markets
+(Uncommon) The Undertaker - Always breather spawn mode for 10 mintues
+(Uncommon) The Quick - Faster player for 3 minutes
+(Uncommon) The Weak - Slower player for 3 minutes
+(Uncommon) The Drunk - Clears notes
+
+(Rare) The Immune - No enemies for 10 minutes
+(Rare) The Popular - Adds 2 difficulty points
+(Rare) The Hermit - Cant leave the room for 10 minutes
+(Rare) The Dizzy - Computer game audio is distorted for 5 minutes
+(Rare) The Deaf - Plays no signal loud audio
+(Rare) The Blind - Power outage
+
+(Very Rare) The Artist - Gives a free key
+(Very Rare) The Dead - Instant kill by Noir 
+
+The Fool:
+Any of the cards above can be a fool in disguise and when you pull a card, it will reveal that is the fool and do nothing.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+*/
+		
+			var c = [
+			{"title":"The Pro",        "symbol":"fa-user",             "description":"The player will be given access to key cue"},
+			{"title":"The Noob",       "symbol":"fa-trash",            "description":"The player will be revoked access to key cue"},
+			{"title":"The Sun",        "symbol":"fa-sun-o",            "description":"The game timer will be slower"},
+			{"title":"The Moon",       "symbol":"fa-moon-o",           "description":"The game timer will be faster"},
+			{"title":"The Rich",       "symbol":"fa-forward",          "description":"The player will gain a random amount of DosCoin"},
+			{"title":"The Poor",       "symbol":"fa-thumbs-down",      "description":"The player will lose a random amount of DosCoin"},
+			{"title":"The Cursed",     "symbol":"fa-bug",              "description":"The computer will recieve 1 to 5 viruses"},
+			
+			{"title":"The Gambler",    "symbol":"fa-money",            "description":"The game will give or take 50 DosCoin from the player"},
+			{"title":"The Hacker",     "symbol":"fa-user-secret",      "description":"The player will recieve a hack"},
+			{"title":"The Devil",      "symbol":"fa-handshake-o",      "description":"The game will discount the costs of both markets"},
+			{"title":"The Undertaker", "symbol":"fa-gavel",            "description":"The Breather will always spawn during the next 10 minutes"},
+			{"title":"The Quick",      "symbol":"fa-bolt",             "description":"The player will be faster for 3 minutes"},
+			{"title":"The Weak",       "symbol":"fa-tint",             "description":"The player will be slower for 3 minutes"},
+			{"title":"The Drunk",      "symbol":"fa-glass",            "description":"The game will clear the player's notes"},
+			
+			{"title":"The Immune",     "symbol":"fa-universal-access", "description":"All enemies will be delayed by 10 minutes"},
+			{"title":"The Popular",    "symbol":"fa-comments-o",       "description":"The game will raise the difficulty by 2"},
+			{"title":"The Hermit",     "symbol":"fa-desktop",          "description":"The player will be enable to leave the apartment for 10 minutes"},
+			{"title":"The Dizzy",      "symbol":"fa-refresh",          "description":"The computer audio will be distorted for 5 minutes"},
+			{"title":"The Deaf",       "symbol":"fa-deaf",             "description":"The game will play loud audio "},
+			{"title":"The Blind",      "symbol":"fa-eye-slash",        "description":"The player will recieve a power outage"},
+			
+			{"title":"The Artist",     "symbol":"fa-paint-brush",      "description":"The game will spawn a random key file on the desktop"},
+			{"title":"The Dead",       "symbol":"fa-heartbeat",        "description":"The apartment and computer interface will be replaced with artsy versions of the originals"},
+			{"title":"The Outlaw",     "symbol":"fa-low-vision",       "description":"All enemies, hacks, and negative events will be disabled for 1 hour"},
+			{"title":"The Empress",    "symbol":"fa-eye",              "description":"Placeholder"},
+
+			{"title":"The Fool",       "symbol":"fa-smile-o",          "description":"When a card is drawn, it has a chance to turn into the fool and do nothing"}
 			]
 			
 			var s = 0
