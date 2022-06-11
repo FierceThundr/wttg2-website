@@ -10,7 +10,7 @@
 				var audio = document.getElementById("audio")
 				var time = new Date()
 				var duration = audio.duration
-				audio.currentTime = Math.floor(time / 1000) % Math.floor(duration)
+				audio.currentTime = (time / 1000) % duration
 				audio.play()
 			}
 		</script>
