@@ -1,0 +1,12 @@
+body {
+width:700px;
+background-color:rgb(51,51,51);
+color:white;
+font-family:Consolas;
+margin:0 auto;
+transform:rotate(-0.3deg);
+}
+
+h3 {
+text-decoration:underline;
+}
