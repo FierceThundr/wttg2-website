@@ -1,0 +1,56 @@
+body {
+background-color:rgb(239,239,239);
+font-family:Arial;
+padding:10px;
+padding-top:50px;
+max-width:1500px;
+margin:0 auto;
+}
+
+p, h4, ul {
+margin:10px 0;
+}
+
+span {
+background-color:rgb(208,208,234);
+padding:3px;
+}
+
+h1 {
+margin:auto 0;
+}
+
+.b0 {
+width:100%;
+margin:10px 0;
+padding:10px;
+box-sizing:border-box;
+border-left:10px solid;
+}
+
+.b1 {
+background-color:rgb(208,208,234);
+border-left-color:rgb(0,0,136);
+
+}
+
+.b2 {
+background-color:rgb(254,229,230);
+border-left-color:rgb(254,0,1);
+}
+
+.address {
+margin-top:20px;
+}
+
+.b0 > p {
+margin-left:30px;
+}
+
+.header {
+width:100%;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* 50 Minutes */
