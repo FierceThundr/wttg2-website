@@ -26,13 +26,13 @@ function note_handler(){
 			data.pattern = shuffle(Array.from({length:data.length},(_,i)=>i+1)).slice(0,data.length)
 			var play = [...data.pattern]
 			var interval = setInterval(function(){
-				var next = play.shift()
-				sound_note(next)
-				note_highlight(next)
 				if (play.length == 0) {
 					data.state = 2
 					clearInterval(interval)
 				}
+				var next = play.shift()
+				sound_note(next)
+				note_highlight(next)
 			},2000)
 			break
 		case 2: //If state is: Guessing
