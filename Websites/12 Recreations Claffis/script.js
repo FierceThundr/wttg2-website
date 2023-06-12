@@ -3,13 +3,12 @@ var data = {
 	"timeout":[],
 	"notes":[],
 	"length":6,
-	"state":0
+	"state":1
 }
 
 window.onload = function(){
 	data.notes = [...document.querySelectorAll("section")]
 	data.notes.forEach(e => e.addEventListener("click",note_handler))
-	data.state = 1
 }
 
 function note_handler(){
@@ -17,26 +16,28 @@ function note_handler(){
 	switch(data.state){
 		case 0: //If state is: Disabled
 			break;
-		case 1: //If state is: Idle
+		case 1: //If state is: Initial
 			if (note != 0) {
 				sound_note(note)
 				note_highlight(note)
 				break
 			}
+		case 2: //If state is: Idle
+			if (note != 0) {break}
 			data.state = 0
-			data.pattern = Array.from({length:data.length},()=>Math.floor(Math.random()*(data.notes.length-1))+1)
+			data.pattern = shuffle(Array.from({length:data.length},(_,i)=>i+1)).slice(0,data.length)
 			var play = [...data.pattern]
 			var interval = setInterval(function(){
 				var next = play.shift()
 				sound_note(next)
 				note_highlight(next)
 				if (play.length == 0) {
-					data.state = 2
+					data.state = 3
 					clearInterval(interval)
 				}
 			},2000)
 			break
-		case 2: //If state is: Guessing
+		case 3: //If state is: Guessing
 			if (note == 0) {break}
 			var next = data.pattern.shift()
 			if (note == next) {
@@ -51,7 +52,7 @@ function note_handler(){
 				}
 				break
 			}
-			data.state = 1
+			data.state = 2
 			sound_failure()
 			break
 	}
@@ -69,6 +70,8 @@ function note_highlight(index){
 		note.classList.remove("highlight")
 	},500)
 }
+
+function shuffle(f){for(let l=f.length-1;l>0;l--){let o=Math.floor(Math.random()*(l+1));[f[l],f[o]]=[f[o],f[l]]}return f}
 
 /* Hook functions */
 
