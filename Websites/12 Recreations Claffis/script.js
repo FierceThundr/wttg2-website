@@ -29,6 +29,7 @@ function note_handler(){
 				if (play.length == 0) {
 					data.state = 2
 					clearInterval(interval)
+					return
 				}
 				var next = play.shift()
 				sound_note(next)
