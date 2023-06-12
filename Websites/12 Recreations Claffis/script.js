@@ -7,7 +7,7 @@ var data = {
 }
 
 window.onload = function(){
-	data.notes = [...document.querySelectorAll("section")]
+	data.notes = [...document.getElementsByTagName("section")]
 	data.notes.forEach(e => e.addEventListener("click",note_handler))
 }
 
