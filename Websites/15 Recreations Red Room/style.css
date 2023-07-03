@@ -1,0 +1,78 @@
+body {
+  margin:0;
+  background-color:black;
+  font-family:Inter,Verdana,Arial,sans-serif;
+  color:white;
+  overflow:hidden;
+}
+
+div {
+  background-image:url(creepyroom.png);
+  background-position:top center;
+  background-repeat:no-repeat;
+  /*box-shadow:inset 0px 0px 10px 10px red;*/
+  box-shadow:inset 15px -10px 25px 0px black, inset -15px -10px 25px 0px black;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%);
+  width:1442px;
+  height:504px;
+}
+
+section {
+  display:grid;
+  grid-template-rows:50px 50px 60px 25px 40px;
+  text-align:center;
+  padding:30px;
+  width:fit-content;
+  margin:0 auto;
+  border-radius:20px 20px 0 0;
+  box-shadow:0px 0px 50px 50px black;
+  background-color:black;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translate(-50%);
+}
+
+section * {
+  display:block;
+  margin:auto;
+  white-space:nowrap;
+}
+
+section *:nth-child(1) { /* Last Chance */
+  color:red;
+  font-size:2.3em;
+  font-weight:150;
+  transform:scaleY(1.6);
+}
+
+section *:nth-child(2) { /* Warning */
+  font-weight:300;
+  font-size:17px;
+  transform:scaleY(1.4);
+  margin-bottom:25px;
+}
+
+section *:nth-child(3) { /* Leave */
+  font-weight:900;
+  font-size:3em;
+  text-decoration:underline;
+}
+
+section *:nth-child(4) { /* or */
+  transform:scaleY(1.2);
+}
+
+section *:nth-child(5) { /* Enter */
+  color:red;
+  font-weight:900;
+  font-size:2em;
+}
+
+@font-face {
+  font-family:Inter;
+  src:url(Inter.ttf);
+}
