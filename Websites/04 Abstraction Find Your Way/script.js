@@ -75,16 +75,9 @@ window.onload = function () {
 	//console.log(links.sort())
 	
 	update_position(des[0])
-	
-	document.getElementById("tag-css").innerHTML = `
-	 .PTAG {left:${(unit_size * des[1][0] + (unit_size / 5))}px;top:${(unit_size * des[1][1] + (unit_size / 5))}px;width:${(unit_size / 5 * 3)}px;height:${(unit_size / 5 * 3)}px}
-	.CPTAG {left:${(unit_size * des[2][0] + (unit_size / 5))}px;top:${(unit_size * des[2][1] + (unit_size / 5))}px;width:${(unit_size / 5 * 3)}px;height:${(unit_size / 5 * 3)}px}
-	.CFTAG {left:${(unit_size * des[3][0] + (unit_size / 5))}px;top:${(unit_size * des[3][1] + (unit_size / 5))}px;width:${(unit_size / 5 * 3)}px;height:${(unit_size / 5 * 3)}px}`
-	
-	document.getElementById("test3").innerHTML = `
-	 .PTAG {left:${(unit_size * des[1][0] + (unit_size / 5))}px;top:${(unit_size * des[1][1] + (unit_size / 5))}px;width:${(unit_size / 5 * 3)}px;height:${(unit_size / 5 * 3)}px}
-	.CPTAG {left:${(unit_size * des[2][0] + (unit_size / 5))}px;top:${(unit_size * des[2][1] + (unit_size / 5))}px;width:${(unit_size / 5 * 3)}px;height:${(unit_size / 5 * 3)}px}
-	.CFTAG {left:${(unit_size * des[3][0] + (unit_size / 5))}px;top:${(unit_size * des[3][1] + (unit_size / 5))}px;width:${(unit_size / 5 * 3)}px;height:${(unit_size / 5 * 3)}px}`
+	tag(des[1],"PTAG")
+	tag(des[2],"CPTAG")
+	tag(des[3],"CFTAG")
 	
 	//console.log(JSON.stringify(des))
 	
